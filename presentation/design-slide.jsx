@@ -7,11 +7,12 @@ import {
   Text
 } from "spectacle";
 import styled from "styled-components";
+import { ToggleSwitch } from "bloom-forms";
 
 import avocado from "../assets/avocado.svg";
 import ColumnWrapper from "./styled-wrappers/column-wrapper";
 import Subheader from "./styled-wrappers/subheader";
-import CodeWrapper from "./styled-wrappers/code-wrapper";
+import StyledCheckWrapper from "./styled-wrappers/styled-check-wrapper";
 
 // slide transition={["zoom"]}
 
@@ -103,9 +104,15 @@ class DesignSlide extends React.Component {
             <Text>
               Which of these inputs has an error?
             </Text>
-            <div onClick={() => this.toggleColorBlindMode(!this.state.colorblindMode)}>
-              Color Blind Mode: {this.state.colorblindMode ? "On" : "Off"}
-            </div>
+            <StyledCheckWrapper dark>
+              <ToggleSwitch
+                isActive={this.state.colorblindMode}
+                labelText="Color Blind Mode: "
+                name="colorBlindMode"
+                onClick={() => this.toggleColorBlindMode(!this.state.colorblindMode)}
+                showLabel
+              />
+            </StyledCheckWrapper>
             <StyledInput
               colorblind={this.state.colorblindMode}
               type="text"

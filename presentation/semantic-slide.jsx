@@ -1,13 +1,12 @@
 import React from "react";
 import {
-  Heading,
-  Image,
   Slide,
-  Text
 } from "spectacle";
+import { ToggleSwitch } from "bloom-forms";
 import styled from "styled-components";
 
 import ColumnWrapper from "./styled-wrappers/column-wrapper";
+import StyledCheckWrapper from "./styled-wrappers/styled-check-wrapper";
 import Subheader from "./styled-wrappers/subheader";
 
 // slide transition={["zoom"]}
@@ -184,16 +183,6 @@ const StyledHeader = styled("div")`
   justify-content: space-between;
 `;
 
-const StyledCheckWrapper = styled("div")`
-  color: #faf9ed;
-  display: inline-block;
-
-  input {
-    position: absolute;
-    left: -1000px;
-  }
-`;
-
 class SemanticSlide extends React.Component {
   constructor(props) {
     super(props);
@@ -201,13 +190,13 @@ class SemanticSlide extends React.Component {
     this.renderExamples = this.renderExamples.bind(this)
     this.state = {
       viewCSS: true
-    }
+    };
   }
 
   toggleCSS = () => {
     this.setState({
       viewCSS: !this.state.viewCSS
-    })
+    });
   }
 
   renderExamples() {
@@ -362,10 +351,13 @@ class SemanticSlide extends React.Component {
         <StyledHeader>
           <Subheader>Semantic HTML</Subheader>
           <StyledCheckWrapper>
-            <label htmlFor="viewCSS" onClick={this.toggleCSS}>
-              CSS: {this.state.viewCSS ? 'On' : 'Off'}
-            </label>
-            <input type="checkbox" name="viewCSS" checked={this.state.viewCSS} readOnly />
+            <ToggleSwitch
+              isActive={this.state.viewCSS}
+              labelText="CSS: "
+              name="viewCSS"
+              onClick={this.toggleCSS}
+              showLabel
+            />
           </StyledCheckWrapper>
         </StyledHeader>
         { this.renderExamples() }
