@@ -27,7 +27,7 @@ const StyledWrapper = styled.div`
 
 const UseResourcesSlide = () => {
   return (
-    <Slide textColor="primary" transition={["fade"]} transitionDuration={500} bgColor="secondary">
+    <Slide textColor="primary" transition={["slide"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
         <Subheader>
           Use Your Resources

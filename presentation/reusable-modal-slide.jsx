@@ -79,7 +79,7 @@ class ReusableModalSlide extends React.Component {
         id: "react-meetup",
         label: "React Denver Meetup Modal"
       }
-    ]
+    ];
 
     return (
       <StyledSlide bgColor="secondary" textColor="primary">

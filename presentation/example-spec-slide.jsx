@@ -35,7 +35,7 @@ const StyleWrapper = styled("div")`
 // create an image of I <3 modals -- several modals hovering over a page
 const ExampleSpecSlide = () => {
   return (
-    <Slide transition={["fade"]} transitionDuration={500} bgColor="secondary" textColor="primary">
+    <Slide transition={["slide"]} transitionDuration={500} bgColor="secondary" textColor="primary">
       <StyledWrapper>
         <Subheader>Building an Example: The Spec</Subheader>
         <StyleWrapper>

@@ -46,7 +46,7 @@ const StyleWrapper = styled("div")`
 
 const SpecCommonSlide = () => {
   return (
-    <Slide transition={["fade"]} transitionDuration={500} bgColor="secondary" textColor="primary">
+    <Slide transition={["slide"]} transitionDuration={500} bgColor="secondary" textColor="primary">
       <StyledWrapper>
         <Subheader>So what's common to all of these modals?</Subheader>
         <StyleWrapper>

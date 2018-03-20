@@ -46,43 +46,41 @@ const StyledLi = styled(ListItem)`
   }
 `;
 
-
-
 const ContentsSlide = () => {
-    return (
-      <Slide transition={['fade']} transitionDuration={500} bgColor="secondary">
-        <Heading size={5} fit caps lineHeight={1} textColor="tertiary">What are we talking about here?</Heading>
-        <StyledWrap>
-          <StyledList textColor="primary">
-            <StyledLi>
-              <dl>
-                <dt>The <strong>pit</strong>:</dt>
-                <dd>Semantic HTML</dd>
-              </dl>
-            </StyledLi>
-            <StyledLi>
-              <dl>
-                <dt>The <strong>meat</strong>:</dt>
-                <dd>Roles &amp; Aria Attributes</dd>
-              </dl>
-            </StyledLi>
-            <StyledLi>
-              <dl>
-                <dt>The <strong>skin</strong>:</dt>
-                <dd>Contrast, Color, &amp; Readability</dd>
-              </dl>
-            </StyledLi>
-            <StyledLi>
-              <dl>
-                <dt>Putting it together:</dt>
-                <dd>Building an Example</dd>
-              </dl>
-            </StyledLi>
-          </StyledList>
-          <Image src={avocado} alt="avocado" height="300px" width="250px" />
-        </StyledWrap>
-      </Slide>
-    );
-}
+  return (
+    <Slide transition={["slide"]} transitionDuration={500} bgColor="secondary">
+      <Heading size={5} fit caps lineHeight={1} textColor="tertiary">What are we talking about here?</Heading>
+      <StyledWrap>
+        <StyledList textColor="primary">
+          <StyledLi>
+            <dl>
+              <dt>The <strong>pit</strong>:</dt>
+              <dd>Semantic HTML</dd>
+            </dl>
+          </StyledLi>
+          <StyledLi>
+            <dl>
+              <dt>The <strong>meat</strong>:</dt>
+              <dd>Roles &amp; Aria Attributes</dd>
+            </dl>
+          </StyledLi>
+          <StyledLi>
+            <dl>
+              <dt>The <strong>skin</strong>:</dt>
+              <dd>Contrast, Color, &amp; Readability</dd>
+            </dl>
+          </StyledLi>
+          <StyledLi>
+            <dl>
+              <dt>Putting it together:</dt>
+              <dd>Building an Example</dd>
+            </dl>
+          </StyledLi>
+        </StyledList>
+        <Image src={avocado} alt="avocado" height="300px" width="250px" />
+      </StyledWrap>
+    </Slide>
+  );
+};
 
 export default ContentsSlide;

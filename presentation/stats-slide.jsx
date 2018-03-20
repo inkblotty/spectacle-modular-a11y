@@ -46,7 +46,7 @@ const StyledSlide = styled(Slide)`
 
 const StatsSlide = () => {
   return (
-    <Slide transition={['fade']} transitionDuration={500} bgColor="secondary">
+    <Slide transition={["slide"]} transitionDuration={500} bgColor="secondary">
       <Heading size={5} fit caps lineHeight={1} textColor="tertiary">
         Why Accessibility?
       </Heading>

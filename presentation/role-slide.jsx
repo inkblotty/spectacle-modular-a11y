@@ -56,42 +56,42 @@ const StyledWrapper = styled.div`
 
 const RoleSlide = () => {
   return (
-    <Slide transition={["fade"]} transitionDuration={500} bgColor="secondary">
+    <Slide transition={["slide"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
-      <Subheader>Role and ARIA</Subheader>
-      <dl>
-        <dt>The ROLE Attribute</dt>
-        <dd>An attribute added to HTML element tags to describe its purpose when the native tag doesn't.</dd>
-        <dd>Examples include:
-          <ul>
-            <li>alert</li>
-            <li>banner</li>
-            <li>dialog</li>
-            <li>group</li>
-            <li>menuitem</li>
-            <li>option</li>
-            <li>separator</li>
-            <li>tab</li>
-            <li>tooltip</li>
-            <li>timer</li>
-          </ul>
-        </dd>
-      </dl>
-      <CodeWrapper>
-        <span>{`<`}
-          <strong>{`div`}</strong>
-          <em>{` role`}</em>
-          <strong>{`=`}</strong>
-          <b>{`"alert"`}</b>
-          {`>{alertMessage}</`}
-          <strong>{`div`}</strong>
-          {`>`}
-        </span>
-      </CodeWrapper>
-      <Image src={avocado} alt="avocado" height="100px" width="250px" />
+        <Subheader>Role and ARIA</Subheader>
+        <dl>
+          <dt>The ROLE Attribute</dt>
+          <dd>An attribute added to HTML element tags to describe its purpose when the native tag doesn't.</dd>
+          <dd>Examples include:
+            <ul>
+              <li>alert</li>
+              <li>banner</li>
+              <li>dialog</li>
+              <li>group</li>
+              <li>menuitem</li>
+              <li>option</li>
+              <li>separator</li>
+              <li>tab</li>
+              <li>tooltip</li>
+              <li>timer</li>
+            </ul>
+          </dd>
+        </dl>
+        <CodeWrapper>
+          <span>{`<`}
+            <strong>{`div`}</strong>
+            <em>{` role`}</em>
+            <strong>{`=`}</strong>
+            <b>{`"alert"`}</b>
+            {`>{alertMessage}</`}
+            <strong>{`div`}</strong>
+            {`>`}
+          </span>
+        </CodeWrapper>
+        <Image src={avocado} alt="avocado" height="100px" width="250px" />
       </StyledWrapper>
     </Slide>
   );
-}
+};
 
 export default RoleSlide;

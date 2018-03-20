@@ -16,7 +16,7 @@ const StyledHeader = styled(Heading)`
 
 const TitleSlide = () => {
   return (
-    <Slide textColor="primary" transition={["fade"]} transitionDuration={500} bgColor="secondary">
+    <Slide textColor="primary" transition={["slide"]} transitionDuration={500} bgColor="secondary">
       <StyledHeader size={1} caps fit textColor="primary">
         Modularizing A11y
       </StyledHeader>

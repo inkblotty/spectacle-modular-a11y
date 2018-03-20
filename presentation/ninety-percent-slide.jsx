@@ -9,7 +9,7 @@ import {
 
 const NinetyPercentSlide = () => {
   return (
-    <Slide transition={['fade']} transitionDuration={500} bgColor="secondary" textColor="primary">
+    <Slide transition={["slide"]} transitionDuration={500} bgColor="secondary" textColor="primary">
       <BlockQuote>
         <Quote>92% of US .gov websites are not fully accessible</Quote>
         <Cite>Information Technology & Innovation Foundation</Cite>
@@ -20,6 +20,6 @@ const NinetyPercentSlide = () => {
       </Text>
     </Slide>
   );
-}
+};
 
 export default NinetyPercentSlide;

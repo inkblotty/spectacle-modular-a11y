@@ -11,7 +11,7 @@ import Subheader from "./styled-wrappers/subheader";
 
 // slide transition={["zoom"]}
 
-const StyledSlide = styled(Slide)`
+const StyledWrapper = styled("div")`
   table {
     text-align: left;
   }
@@ -347,21 +347,23 @@ class SemanticSlide extends React.Component {
 
   render() {
     return (
-      <StyledSlide bgColor="secondary">
-        <StyledHeader>
-          <Subheader>Semantic HTML</Subheader>
-          <StyledCheckWrapper>
-            <ToggleSwitch
-              isActive={this.state.viewCSS}
-              labelText="CSS: "
-              name="viewCSS"
-              onClick={this.toggleCSS}
-              showLabel
-            />
-          </StyledCheckWrapper>
-        </StyledHeader>
-        { this.renderExamples() }
-      </StyledSlide>
+      <Slide bgColor="secondary">
+        <StyledWrapper>
+          <StyledHeader>
+            <Subheader>Semantic HTML</Subheader>
+            <StyledCheckWrapper>
+              <ToggleSwitch
+                isActive={this.state.viewCSS}
+                labelText="CSS: "
+                name="viewCSS"
+                onClick={this.toggleCSS}
+                showLabel
+              />
+            </StyledCheckWrapper>
+          </StyledHeader>
+          { this.renderExamples() }
+        </StyledWrapper>
+      </Slide>
     );
   }
 }

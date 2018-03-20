@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
 
 const ModalCloseSlide = () => {
   return (
-    <Slide textColor="primary" transition={["fade"]} transitionDuration={500} bgColor="secondary">
+    <Slide textColor="primary" transition={["slide"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
         <Subheader>
           The Pit: Semantic Elements

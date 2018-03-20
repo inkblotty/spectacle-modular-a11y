@@ -19,7 +19,7 @@ const StyleWrapper = styled("div")`
 
 const ModalFunctionalitySlide = () => {
   return (
-    <Slide textColor="primary" transition={["fade"]} transitionDuration={500} bgColor="secondary">
+    <Slide textColor="primary" transition={["slide"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
         <Subheader>
           The Finishing Touches: Functionality

@@ -15,7 +15,7 @@ const StyledWrapper = styled.div`
 
 const ModalAriaSlide = () => {
   return (
-    <Slide textColor="primary" transition={["fade"]} transitionDuration={500} bgColor="secondary">
+    <Slide textColor="primary" transition={["slide"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
         <Subheader>
           <span>The Meat: Role and ARIA</span>

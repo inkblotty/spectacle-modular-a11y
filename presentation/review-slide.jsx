@@ -14,7 +14,7 @@ import {
 import avocado from "../assets/avocado.svg";
 import styled from "styled-components";
 
-const StyledWrap = styled('div')`
+const StyledWrap = styled("div")`
   align-items: center;
   display: flex;
   flex-wrap: nowrap;
@@ -75,9 +75,9 @@ class TitleSlide extends React.Component {
   }
 
   render() {
-    const showHtml = this.state.visible.indexOf('semantics') > -1;
-    const showAria = this.state.visible.indexOf('aria') > -1;
-    const showDesign = this.state.visible.indexOf('design') > -1;
+    const showHtml = this.state.visible.indexOf("semantics") > -1;
+    const showAria = this.state.visible.indexOf("aria") > -1;
+    const showDesign = this.state.visible.indexOf("design") > -1;
     return (
       <Slide bgColor="secondary">
         <Heading size={5} fit caps lineHeight={1} textColor="tertiary">Quick Review</Heading>
@@ -88,7 +88,7 @@ class TitleSlide extends React.Component {
                 <dt>The <strong>pit</strong>:</dt>
                 <dd>{ showHtml
                   ? "Semantic HTML"
-                  : <button onClick={() => this.showContent('semantics')}>show</button> }
+                  : <button onClick={() => this.showContent("semantics")}>show</button> }
                 </dd>
               </dl>
             </StyledLi>
@@ -97,7 +97,7 @@ class TitleSlide extends React.Component {
                 <dt>The <strong>meat</strong>:</dt>
                 <dd>{ showAria
                   ? "Roles & Aria Attributes"
-                  : <button onClick={() => this.showContent('aria')}>show</button> }
+                  : <button onClick={() => this.showContent("aria")}>show</button> }
                 </dd>
               </dl>
             </StyledLi>
@@ -106,7 +106,7 @@ class TitleSlide extends React.Component {
                 <dt>The <strong>skin</strong>:</dt>
                 <dd>{ showDesign
                   ? "Contrast, Color, & Readability"
-                  : <button onClick={() => this.showContent('design')}>show</button> }
+                  : <button onClick={() => this.showContent("design")}>show</button> }
                 </dd>
               </dl>
             </StyledLi>

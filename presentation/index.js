@@ -50,25 +50,25 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <StyledDeck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+      <StyledDeck transition={["slide"]} transitionDuration={500} theme={theme}>
         {TitleSlide()}
         {StatsSlide()}
         {NinetyPercentSlide()}
         {ContentsSlide()}
-        <SemanticSlide />
+        <SemanticSlide transition={["slide"]} />
         {SemanticSummarySlide()}
         {RoleSlide()}
         {AriaSlide()}
-        <AriaExampleSlide />
-        <DesignSlide />
-        <ReviewSlide />
+        <AriaExampleSlide transition={["slide"]} />
+        <DesignSlide transition={["slide"]} />
+        <ReviewSlide transition={["slide"]} />
         {ExampleSpecSlide()}
         {SpecCommonSlide()}
         {ModalCloseSlide()}
         {ModalAriaSlide()}
         {ModalTransitionSlide()}
         {ModalFunctionalitySlide()}
-        <ReusableModalSlide />
+        <ReusableModalSlide transition={["slide"]} />
         {UseResourcesSlide()}
       </StyledDeck>
     );

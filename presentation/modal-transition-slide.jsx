@@ -17,7 +17,7 @@ const StyledWrapper = styled.div`
 
 const ModalTransitionSlide = () => {
   return (
-    <Slide transition={["fade"]} transitionDuration={500} bgColor="secondary">
+    <Slide transition={["slide"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
         <Subheader>
           The Skin: Design
