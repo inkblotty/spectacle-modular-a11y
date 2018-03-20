@@ -47,12 +47,12 @@ export default class Presentation extends React.Component {
         {StatsSlide()}
         {NinetyPercentSlide()}
         {ContentsSlide()}
-        {/* <SemanticSlide /> */}
+        <SemanticSlide />
         {SemanticSummarySlide()}
         {RoleSlide()}
         {AriaSlide()}
-        {/* <AriaExampleSlide /> */}
-        {/* <DesignSlide /> */}
+        <AriaExampleSlide />
+        <DesignSlide />
       </StyledDeck>
     );
   }
