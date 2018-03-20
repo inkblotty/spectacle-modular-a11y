@@ -1,7 +1,7 @@
 {
   "name": "spectacle-modular-a11y",
   "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "description": "Modular A11y Presentation using Spectacle",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
