@@ -13,7 +13,7 @@ CustomErrorReporter.propTypes = {
 };
 
 ReactDOM.render(
-  <AppContainer errorReporter={CustomErrorReporter}>
+  <AppContainer errorReporter={CustomErrorReporter} style={{ backgroundColor: "#333333" }}>
     <Presentation />
   </AppContainer>,
   document.getElementById("root"),

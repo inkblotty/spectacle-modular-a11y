@@ -58,7 +58,11 @@ class ReusableModalSlide extends React.Component {
     }
     this.setState({
       isOpen: !this.state.isOpen
-    });
+    }, () => {
+      if (!this.state.isOpen) {
+        document.getElementById("trigger-modal-button").focus();
+      }
+    })
   }
 
   render() {
@@ -90,7 +94,7 @@ class ReusableModalSlide extends React.Component {
           options={radioOptions}
           value={this.state.activeModal}
         />
-        <button onClick={this.toggleModal}>
+        <button onClick={this.toggleModal} id="trigger-modal-button">
           Open Selected Modal
         </button>
         <StyledModalWrapper>

@@ -33,10 +33,6 @@ import UseResourcesSlide from "./use-resources-slide.jsx";
 // Require CSS
 require("normalize.css");
 
-const StyledDeck = styled(Deck)`
-  background-color: #333333;
-`;
-
 const theme = createTheme({
   primary: "#faf9ed",
   secondary: "#333333",
@@ -50,27 +46,29 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <StyledDeck transition={["slide"]} transitionDuration={500} theme={theme}>
-        {TitleSlide()}
-        {StatsSlide()}
-        {NinetyPercentSlide()}
-        {ContentsSlide()}
-        <SemanticSlide transition={["slide"]} />
-        {SemanticSummarySlide()}
-        {RoleSlide()}
-        {AriaSlide()}
-        <AriaExampleSlide transition={["slide"]} />
-        <DesignSlide transition={["slide"]} />
-        <ReviewSlide transition={["slide"]} />
-        {ExampleSpecSlide()}
-        {SpecCommonSlide()}
-        {ModalCloseSlide()}
-        {ModalAriaSlide()}
-        {ModalTransitionSlide()}
-        {ModalFunctionalitySlide()}
-        <ReusableModalSlide transition={["slide"]} />
-        {UseResourcesSlide()}
-      </StyledDeck>
+      <Deck transition={["slide"]} transitionDuration={500} theme={theme} bgColor="secondary">
+        <div style={{backgroundColor: "#333"}} hasSlideChildren>
+          {TitleSlide()}
+          {StatsSlide()}
+          {NinetyPercentSlide()}
+          {ContentsSlide()}
+          <SemanticSlide transition={["slide"]} />
+          {SemanticSummarySlide()}
+          {RoleSlide()}
+          {AriaSlide()}
+          <AriaExampleSlide transition={["slide"]} />
+          <DesignSlide transition={["slide"]} />
+          <ReviewSlide transition={["slide"]} />
+          {ExampleSpecSlide()}
+          {SpecCommonSlide()}
+          {ModalCloseSlide()}
+          {ModalAriaSlide()}
+          {ModalTransitionSlide()}
+          {ModalFunctionalitySlide()}
+          <ReusableModalSlide transition={["slide"]} />
+          {UseResourcesSlide()}
+        </div>
+      </Deck>
     );
   }
 }

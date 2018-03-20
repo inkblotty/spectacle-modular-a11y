@@ -29,7 +29,7 @@ const StyledWrapper = styled("div")`
 
   li {
     display: list-item;
-    list-style-type: dot;
+    list-style-type: disc;
     text-align: -webkit-match-parent;
   }
 `;

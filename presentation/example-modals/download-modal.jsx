@@ -19,7 +19,7 @@ const StyledDiv = styled("div")`
   }
 `;
 
-let downloadTimeout
+let downloadTimeout;
 class DownloadProgress extends React.Component {
   constructor(props) {
     super(props);
