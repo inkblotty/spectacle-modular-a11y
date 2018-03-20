@@ -35,23 +35,23 @@ const StyleWrapper = styled("div")`
 // create an image of I <3 modals -- several modals hovering over a page
 const ExampleSpecSlide = () => {
   return (
-    <Slide transition={["zoom"]} transitionDuration={500} bgColor="secondary" textColor="primary">
+    <Slide transition={["fade"]} transitionDuration={500} bgColor="secondary" textColor="primary">
       <StyledWrapper>
-      <Subheader>Building an Example: The Spec</Subheader>
-      <StyleWrapper>
-        <List>
-          <ListItem>
-            8 modals
-          </ListItem>
-          <ListItem>
-            all different types of content (forms, wizards, messages)
-          </ListItem>
-          <ListItem>
-            <strong>They all have to be accessible.</strong>
-          </ListItem>
-        </List>
-        <Image src={modalImg} alt="Example Layout" height="500px" />
-      </StyleWrapper>
+        <Subheader>Building an Example: The Spec</Subheader>
+        <StyleWrapper>
+          <List transition={["fade"]}>
+            <ListItem>
+              8 modals
+            </ListItem>
+            <ListItem>
+              all different types of content (forms, wizards, messages)
+            </ListItem>
+            <ListItem>
+              <strong>They all have to be accessible.</strong>
+            </ListItem>
+          </List>
+          <Image src={modalImg} alt="Example Layout" height="500px" />
+        </StyleWrapper>
       </StyledWrapper>
     </Slide>
   );

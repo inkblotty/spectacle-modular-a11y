@@ -59,7 +59,7 @@ const StyledWrapper = styled.div`
 
 const SemanticSummarySlide = () => {
   return (
-    <Slide transition={["zoom"]} transitionDuration={500} bgColor="secondary">
+    <Slide transition={["fade"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
         <Subheader>Semantic HTML</Subheader>
         <List>

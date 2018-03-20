@@ -9,8 +9,6 @@ import modalFunctionImg from "../assets/modal-functions.png";
 import modalEventsImg from "../assets/modal-events.png";
 import Subheader from "./styled-wrappers/subheader";
 
-// slide transition={["zoom"]}
-
 const StyledWrapper = styled.div`
   text-align: left;
 `;
@@ -21,7 +19,7 @@ const StyleWrapper = styled("div")`
 
 const ModalFunctionalitySlide = () => {
   return (
-    <Slide textColor="primary" transition={["zoom"]} transitionDuration={500} bgColor="secondary">
+    <Slide textColor="primary" transition={["fade"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
         <Subheader>
           The Finishing Touches: Functionality
@@ -36,6 +34,6 @@ const ModalFunctionalitySlide = () => {
       </StyledWrapper>
     </Slide>
   );
-}
+};
 
 export default ModalFunctionalitySlide;

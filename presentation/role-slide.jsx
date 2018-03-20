@@ -56,7 +56,7 @@ const StyledWrapper = styled.div`
 
 const RoleSlide = () => {
   return (
-    <Slide transition={["zoom"]} transitionDuration={500} bgColor="secondary">
+    <Slide transition={["fade"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
       <Subheader>Role and ARIA</Subheader>
       <dl>

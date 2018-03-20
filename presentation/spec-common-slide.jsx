@@ -46,11 +46,11 @@ const StyleWrapper = styled("div")`
 
 const SpecCommonSlide = () => {
   return (
-    <Slide transition={["zoom"]} transitionDuration={500}  bgColor="secondary" textColor="primary">
+    <Slide transition={["fade"]} transitionDuration={500} bgColor="secondary" textColor="primary">
       <StyledWrapper>
         <Subheader>So what's common to all of these modals?</Subheader>
         <StyleWrapper>
-          <List>
+          <List transition={["fade"]}>
             <ListItem>
               close button
             </ListItem>

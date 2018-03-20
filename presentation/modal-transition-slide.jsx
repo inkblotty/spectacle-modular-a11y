@@ -14,23 +14,10 @@ import Subheader from "./styled-wrappers/subheader";
 const StyledWrapper = styled.div`
   text-align: left;
 `;
-const StyleWrapper = styled("div")`
-  display: flex;
-  justify-content: space-between;
-
-  li {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-  }
-`;
 
 const ModalTransitionSlide = () => {
   return (
-    <Slide transition={["zoom"]} transitionDuration={500} bgColor="secondary">
+    <Slide transition={["fade"]} transitionDuration={500} bgColor="secondary">
       <StyledWrapper>
         <Subheader>
           The Skin: Design
