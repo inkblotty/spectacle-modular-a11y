@@ -40,7 +40,7 @@ const StyledExample = styled("div")`
   }
 
   p {
-    font-size: ${props => props.small ? "0.95em" : "1.1em"};
+    font-size: ${(props) => props.small ? "0.95em" : "1.1em"};
     margin-bottom: 1em;
   }
 `;
@@ -52,41 +52,41 @@ const BadContrast = styled("p")`
 const GoodContrast = styled("p")``;
 
 const StyledInput = styled("input")`
-  border: 3px solid ${props => props.colorblind ? "#767735" : "#3EC300"};
+  border: 5px solid ${(props) => props.colorblind ? "#767735" : "#3EC300"};
   margin: 10px 0;
 `;
 
 const ErrorInput = styled("input")`
-  border: 3px solid ${props => props.colorblind ? "#97954B" : "#DE3C4B"};
+  border: 5px solid ${(props) => props.colorblind ? "#97954B" : "#DE3C4B"};
 `;
 
 class DesignSlide extends React.Component {
   constructor(props) {
     super(props);
 
-    this.renderExample = this.renderExample.bind(this)
-    this.toggleColorBlindMode = this.toggleColorBlindMode.bind(this)
-    this.toggleExample = this.toggleExample.bind(this)
+    this.renderExample = this.renderExample.bind(this);
+    this.toggleColorBlindMode = this.toggleColorBlindMode.bind(this);
+    this.toggleExample = this.toggleExample.bind(this);
     this.state = {
       activeExample: "contrast",
       colorblindMode: true
-    }
+    };
   }
 
   toggleColorBlindMode(isOn) {
     this.setState({
       colorblindMode: isOn
-    })
+    });
   }
 
   toggleExample(example) {
     this.setState({
       activeExample: example
-    })
+    });
   }
 
   renderExample() {
-    switch(this.state.activeExample) {
+    switch (this.state.activeExample) {
       case "contrast":
         return (
           <StyledExample>
@@ -94,7 +94,7 @@ class DesignSlide extends React.Component {
             <BadContrast>Minimalism is not always your friend</BadContrast>
             <GoodContrast>Minimalism is not always your friend</GoodContrast>
           </StyledExample>
-        )
+        );
       case "color":
         // protanopia pictured
         return (
@@ -104,7 +104,7 @@ class DesignSlide extends React.Component {
               Which of these inputs has an error?
             </Text>
             <div onClick={() => this.toggleColorBlindMode(!this.state.colorblindMode)}>
-              Color Blind Mode: {this.state.colorblindMode ? 'On' : 'Off'}
+              Color Blind Mode: {this.state.colorblindMode ? "On" : "Off"}
             </div>
             <StyledInput
               colorblind={this.state.colorblindMode}
@@ -119,9 +119,9 @@ class DesignSlide extends React.Component {
               type="text"
             />
           </StyledExample>
-        )
+        );
       default:
-        return ""
+        return "";
     }
   }
 

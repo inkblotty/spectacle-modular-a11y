@@ -65,6 +65,8 @@ const SemanticSummarySlide = () => {
         <List>
           <ListItem>
             Use markup that describes the <strong>meaning</strong> of that element
+            <br/>
+            <small>{"<header>, <footer>, <button>, <aside>, <progress>, etc."}</small>
           </ListItem>
           <ListItem>
             <em>Bad Semantics</em> are often hidden by <strong>Good CSS. </strong>
