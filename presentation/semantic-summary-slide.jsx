@@ -13,7 +13,7 @@ import Subheader from "./styled-wrappers/subheader";
 
 // slide transition={["zoom"]}
 
-const StyledSlide = styled(Slide)`
+const StyledWrapper = styled.div`
   table {
     text-align: left;
   }
@@ -57,10 +57,10 @@ const StyledSlide = styled(Slide)`
   }
 `;
 
-class SemanticSummarySlide extends React.Component {
-  render() {
-    return (
-      <StyledSlide bgColor="secondary">
+const SemanticSummarySlide = () => {
+  return (
+    <Slide transition={["zoom"]} transitionDuration={500} bgColor="secondary">
+      <StyledWrapper>
         <Subheader>Semantic HTML</Subheader>
         <List>
           <ListItem>
@@ -77,9 +77,9 @@ class SemanticSummarySlide extends React.Component {
           </ListItem>
         </List>
         <Image src={avocado} alt="avocado" height="100px" width="250px" />
-      </StyledSlide>
-    );
-  }
+      </StyledWrapper>
+    </Slide>
+  );
 }
 
 export default SemanticSummarySlide;

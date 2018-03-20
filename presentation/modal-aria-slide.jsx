@@ -11,7 +11,7 @@ import Subheader from "./styled-wrappers/subheader";
 
 // slide transition={["zoom"]}
 
-const StyledSlide = styled(Slide)`
+const StyledWrapper = styled.div`
   text-align: left;
 `;
 const StyleWrapper = styled("div")`
@@ -28,12 +28,10 @@ const StyleWrapper = styled("div")`
   }
 `;
 
-// create an image of I <3 modals -- several modals hovering over a page
-
-class ModalAriaSlide extends React.Component {
-  render() {
-    return (
-      <StyledSlide bgColor="secondary" textColor="primary">
+const ModalAriaSlide = () => {
+  return (
+    <Slide textColor="primary" transition={["zoom"]} transitionDuration={500} bgColor="secondary">
+      <StyledWrapper>
         <Subheader>
           <span>The Meat: Role and ARIA</span>
           <span><Image src={avocado} alt="avocado" height="50px" /></span>
@@ -42,9 +40,9 @@ class ModalAriaSlide extends React.Component {
           Our modal needs: role='dialog' and ARIA related to showing & hiding.
         </div>
         <Image src={modalAriaImg} alt="Modal markup and styling" height="500px" />
-      </StyledSlide>
-    );
-  }
+      </StyledWrapper>
+    </Slide>
+  );
 }
 
 export default ModalAriaSlide;

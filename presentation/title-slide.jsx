@@ -14,20 +14,19 @@ const StyledHeader = styled(Heading)`
 
 // slide transition={["zoom"]}
 
-class TitleSlide extends React.Component {
-  render() {
-    return (
-      <Slide bgColor="secondary">
-        <StyledHeader size={1} caps fit textColor="primary">
-          Modularizing A11y
-        </StyledHeader>
-        <Image src={avocado} alt="avocado" height="100px" />
-        <Text textColor="tertiary" size={5}>
-          <small>Katie Foster | March 20, 2018</small>
-        </Text>
-      </Slide>
-    );
-  }
+const TitleSlide = () => {
+  return (
+    <Slide textColor="primary" transition={["fade"]} transitionDuration={500} bgColor="secondary">
+      <StyledHeader size={1} caps fit textColor="primary">
+        Modularizing A11y
+      </StyledHeader>
+      <Image src={avocado} alt="avocado" height="100px" />
+      <Text textColor="tertiary" size={5}>
+        <small>Katie Foster | March 20, 2018</small>
+      </Text>
+    </Slide>
+  );
 }
 
-export default TitleSlide;
+export default TitleSlide
+

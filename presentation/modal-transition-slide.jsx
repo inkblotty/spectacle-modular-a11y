@@ -11,7 +11,7 @@ import Subheader from "./styled-wrappers/subheader";
 
 // slide transition={["zoom"]}
 
-const StyledSlide = styled(Slide)`
+const StyledWrapper = styled.div`
   text-align: left;
 `;
 const StyleWrapper = styled("div")`
@@ -28,10 +28,10 @@ const StyleWrapper = styled("div")`
   }
 `;
 
-class ModalTransitionSlide extends React.Component {
-  render() {
-    return (
-      <StyledSlide bgColor="secondary" textColor="primary">
+const ModalTransitionSlide = () => {
+  return (
+    <Slide transition={["zoom"]} transitionDuration={500} bgColor="secondary">
+      <StyledWrapper>
         <Subheader>
           The Skin: Design
           <span><Image src={avocado} alt="avocado" height="50px" /></span>
@@ -40,9 +40,9 @@ class ModalTransitionSlide extends React.Component {
           Now we add a Transition and some styles, paying attention to contrast and readability.
         </div>
         <Image src={modalTransitionImg} alt="Modal transition and styling" height="400px" />
-      </StyledSlide>
-    );
-  }
+      </StyledWrapper>
+    </Slide>
+  );
 }
 
 export default ModalTransitionSlide;

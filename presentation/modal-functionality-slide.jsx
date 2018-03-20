@@ -11,7 +11,7 @@ import Subheader from "./styled-wrappers/subheader";
 
 // slide transition={["zoom"]}
 
-const StyledSlide = styled(Slide)`
+const StyledWrapper = styled.div`
   text-align: left;
 `;
 const StyleWrapper = styled("div")`
@@ -19,10 +19,10 @@ const StyleWrapper = styled("div")`
   justify-content: space-between;
 `;
 
-class ModalFunctionalitySlide extends React.Component {
-  render() {
-    return (
-      <StyledSlide bgColor="secondary" textColor="primary">
+const ModalFunctionalitySlide = () => {
+  return (
+    <Slide textColor="primary" transition={["zoom"]} transitionDuration={500} bgColor="secondary">
+      <StyledWrapper>
         <Subheader>
           The Finishing Touches: Functionality
         </Subheader>
@@ -33,9 +33,9 @@ class ModalFunctionalitySlide extends React.Component {
           <Image src={modalFunctionImg} alt="Modal functionality methods" height="350px" />
           <Image src={modalEventsImg} alt="Modal events markup" height="300px" />
         </StyleWrapper>
-      </StyledSlide>
-    );
-  }
+      </StyledWrapper>
+    </Slide>
+  );
 }
 
 export default ModalFunctionalitySlide;

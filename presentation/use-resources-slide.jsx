@@ -11,8 +11,7 @@ import avocado from "../assets/avocado.svg";
 import Subheader from "./styled-wrappers/subheader";
 
 // slide transition={["zoom"]}
-
-const StyledSlide = styled(Slide)`
+const StyledWrapper = styled.div`
   text-align: left;
 
   li {
@@ -26,10 +25,10 @@ const StyledSlide = styled(Slide)`
   }
 `;
 
-class UseResourcesSlide extends React.Component {
-  render() {
-    return (
-      <StyledSlide bgColor="secondary" textColor="primary">
+const UseResourcesSlide = () => {
+  return (
+    <Slide textColor="primary" transition={["zoom"]} transitionDuration={500} bgColor="secondary">
+      <StyledWrapper>
         <Subheader>
           Use Your Resources
           <span><Image src={avocado} alt="avocado" height="50px" /></span>
@@ -62,9 +61,9 @@ class UseResourcesSlide extends React.Component {
             <small>coolors.co</small>
           </ListItem>
         </List>
-      </StyledSlide>
-    );
-  }
+      </StyledWrapper>
+    </Slide>
+  );
 }
 
 export default UseResourcesSlide;

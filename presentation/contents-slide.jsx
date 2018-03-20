@@ -46,10 +46,11 @@ const StyledLi = styled(ListItem)`
   }
 `;
 
-class TitleSlide extends React.Component {
-  render() {
+
+
+const ContentsSlide = () => {
     return (
-      <Slide bgColor="secondary">
+      <Slide transition={['fade']} transitionDuration={500} bgColor="secondary">
         <Heading size={5} fit caps lineHeight={1} textColor="tertiary">What are we talking about here?</Heading>
         <StyledWrap>
           <StyledList textColor="primary">
@@ -82,7 +83,6 @@ class TitleSlide extends React.Component {
         </StyledWrap>
       </Slide>
     );
-  }
 }
 
-export default TitleSlide;
+export default ContentsSlide;

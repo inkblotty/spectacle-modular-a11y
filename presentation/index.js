@@ -51,25 +51,25 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <StyledDeck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <TitleSlide />
-        <StatsSlide />
-        <NinetyPercentSlide />
-        <ContentsSlide />
+        {TitleSlide()}
+        {StatsSlide()}
+        {NinetyPercentSlide()}
+        {ContentsSlide()}
         <SemanticSlide />
-        <SemanticSummarySlide />
-        <RoleSlide />
-        <AriaSlide />
+        {SemanticSummarySlide()}
+        {RoleSlide()}
+        {AriaSlide()}
         <AriaExampleSlide />
         <DesignSlide />
         <ReviewSlide />
-        <ExampleSpecSlide />
-        <SpecCommonSlide />
-        <ModalCloseSlide />
-        <ModalAriaSlide />
-        <ModalTransitionSlide />
-        <ModalFunctionalitySlide />
+        {ExampleSpecSlide()}
+        {SpecCommonSlide()}
+        {ModalCloseSlide()}
+        {ModalAriaSlide()}
+        {ModalTransitionSlide()}
+        {ModalFunctionalitySlide()}
         <ReusableModalSlide />
-        <UseResourcesSlide />
+        {UseResourcesSlide()}
       </StyledDeck>
     );
   }

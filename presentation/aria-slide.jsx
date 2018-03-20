@@ -14,7 +14,7 @@ import CodeWrapper from "./styled-wrappers/code-wrapper";
 
 // slide transition={["zoom"]}
 
-const StyledSlide = styled(Slide)`
+const StyledWrapper = styled.div`
   text-align: left;
 
   dl {
@@ -66,10 +66,10 @@ const StyledSlide = styled(Slide)`
   }
 `;
 
-class AriaSlide extends React.Component {
-  render() {
-    return (
-      <StyledSlide bgColor="secondary">
+const AriaSlide = () => {
+  return (
+    <Slide transition={["spin"]} transitionDuration={500} bgColor="secondary">
+      <StyledWrapper>
         <Subheader>Role and ARIA</Subheader>
         <dl>
           <dt>ARIA Attributes</dt>
@@ -93,9 +93,9 @@ class AriaSlide extends React.Component {
           </dd>
         </dl>
         <Image src={avocado} alt="avocado" height="100px" width="250px" />
-      </StyledSlide>
-    );
-  }
+      </StyledWrapper>
+    </Slide>
+  );
 }
 
 export default AriaSlide;
