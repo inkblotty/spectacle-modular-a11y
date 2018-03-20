@@ -10,10 +10,6 @@ const StyledDiv = styled("div")`
     margin-top: 0;
   }
 
-  label {
-    text-align: left;
-  }
-
   button {
     background-color: #438ABC;
     border: 4px;
@@ -23,18 +19,42 @@ const StyledDiv = styled("div")`
   }
 `;
 
-const DownloadProgress = (props) => {
-  console.log(props)
-  return (
-    <StyledDiv>
-      <h3>Download in Progress</h3>
-      <progress />
-      <Button
-        onClick={props.closeModal}
-        contents="Close this Modal"
-      />
-    </StyledDiv>
-  )
+class DownloadProgress extends React.Component {
+  constructor(props) {
+    super(props);
+    this.incrementProgress = this.incrementProgress.bind(this)
+    this.state = {
+      currentProgress: 0
+    }
+  }
+
+  incrementProgress = () => {
+    let downloadTimeout = window.setTimeout(() => {
+    if (this.state.currentProgress < 40) {
+        this.setState({
+          currentProgress: this.state.currentProgress + 1
+        })
+        this.incrementProgress();
+      }
+    }, 1000)
+  }
+
+  componentDidMount() {
+    this.incrementProgress();
+  }
+
+  render() {
+    return (
+      <StyledDiv>
+        <h3>Download in Progress</h3>
+        <progress max="40" min="0" value={this.state.currentProgress} />
+        <Button
+          onClick={this.props.closeModal}
+          contents="Close this Modal"
+        />
+      </StyledDiv>
+    )
+  }
 }
 
 export default DownloadProgress
