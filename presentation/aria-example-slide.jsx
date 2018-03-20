@@ -59,6 +59,7 @@ const StyledSlide = styled(Slide)`
   }
 `;
 
+// const StatsSlAriaExampleSlideide = () => {
 class AriaExampleSlide extends React.Component {
   constructor(props) {
     super(props);

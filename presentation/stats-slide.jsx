@@ -44,47 +44,45 @@ const StyledSlide = styled(Slide)`
 
 // slide transition={["zoom"]}
 
-class TitleSlide extends React.Component {
-  render() {
-    return (
-      <StyledSlide bgColor="secondary">
-        <Heading size={5} fit caps lineHeight={1} textColor="tertiary">
-          Why Accessibility?
-        </Heading>
-        <Text textColor="primary">
-          1 in 5 Americans have a disability
-        </Text>
-        <ImageWrapper>
-          <Image src={mobilityImg} alt="figure moving in wheelchair" />
-          <Image src={earImg} alt="ear" />
-          <Image src={blindImg} alt="figure with blind assistance cane" />
-        </ImageWrapper>
-        <ListWrapper textColor="quarternary">
-          <ListItem>
-            Mobility
-          </ListItem>
-          <ListItem>
-            Deaf & Hard of Hearing
-          </ListItem>
-          <ListItem>
-            Mental Health Condition
-          </ListItem>
-          <ListItem>
-            Motor Control
-          </ListItem>
-          <ListItem>
-            Acquired Brain Injury
-          </ListItem>
-          <ListItem>
-            Intellectual Impairment
-          </ListItem>
-        </ListWrapper>
-        <Text textColor="primary">
-          2 million Americans are Legally Blind
-        </Text>
-      </StyledSlide>
-    );
-  }
+const StatsSlide = () => {
+  return (
+    <Slide transition={['fade']} transitionDuration={500} bgColor="secondary">
+      <Heading size={5} fit caps lineHeight={1} textColor="tertiary">
+        Why Accessibility?
+      </Heading>
+      <Text textColor="primary">
+        1 in 5 Americans have a disability
+      </Text>
+      <ImageWrapper>
+        <Image src={mobilityImg} alt="figure moving in wheelchair" />
+        <Image src={earImg} alt="ear" />
+        <Image src={blindImg} alt="figure with blind assistance cane" />
+      </ImageWrapper>
+      <ListWrapper textColor="quarternary">
+        <ListItem>
+          Mobility
+        </ListItem>
+        <ListItem>
+          Deaf & Hard of Hearing
+        </ListItem>
+        <ListItem>
+          Mental Health Condition
+        </ListItem>
+        <ListItem>
+          Motor Control
+        </ListItem>
+        <ListItem>
+          Acquired Brain Injury
+        </ListItem>
+        <ListItem>
+          Intellectual Impairment
+        </ListItem>
+      </ListWrapper>
+      <Text textColor="primary">
+        2 million Americans are Legally Blind
+      </Text>
+    </Slide>
+  );
 }
 
-export default TitleSlide;
+export default StatsSlide;
