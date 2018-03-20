@@ -7,7 +7,7 @@ import {
   Text
 } from "spectacle";
 import styled from "styled-components";
-import { ToggleSwitch } from "bloom-forms";
+import { RadioGroup, ToggleSwitch } from "bloom-forms";
 
 import avocado from "../assets/avocado.svg";
 import ColumnWrapper from "./styled-wrappers/column-wrapper";
@@ -80,9 +80,10 @@ class DesignSlide extends React.Component {
     });
   }
 
-  toggleExample(example) {
+  toggleExample(e) {
     this.setState({
-      activeExample: example
+      activeExample: e.target.id,
+      colorblindMode: true
     });
   }
 
@@ -133,6 +134,17 @@ class DesignSlide extends React.Component {
   }
 
   render() {
+    const radioOptions = [
+      {
+        id: "contrast",
+        label: "Vision Impairments"
+      },
+      {
+        id: "color",
+        label: "Colorblindness"
+      }
+    ]
+
     return (
       <StyledSlide bgColor="secondary">
         <Subheader>Contrast, Color, and Readability</Subheader>
@@ -141,18 +153,12 @@ class DesignSlide extends React.Component {
             <Text textColor="primary">
               Design needs to consider:
             </Text>
-            <List>
-              <ListItem>
-                <a onClick={() => this.toggleExample("contrast")}>
-                  vision impairments
-                </a>
-              </ListItem>
-              <ListItem>
-                <a onClick={() => this.toggleExample("color")}>
-                  colorblindness
-                </a>
-              </ListItem>
-            </List>
+            <RadioGroup
+              name="activeExample"
+              onChange={this.toggleExample}
+              options={radioOptions}
+              value={this.state.activeExample}
+            />
           </StyledDescription>
           {this.renderExample()}
         </ColumnWrapper>
