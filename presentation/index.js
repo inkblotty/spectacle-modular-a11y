@@ -47,26 +47,26 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["slide"]} transitionDuration={500} theme={theme} bgColor="secondary">
-        <div style={{backgroundColor: "#333"}} hasSlideChildren>
-          {TitleSlide()}
-          {StatsSlide()}
-          {NinetyPercentSlide()}
-          {ContentsSlide()}
+        <div style={{ backgroundColor: "#333" }} hasSlideChildren>
+          { TitleSlide() }
+          { StatsSlide() }
+          { NinetyPercentSlide() }
+          { ContentsSlide() }
           <SemanticSlide transition={["slide"]} />
-          {SemanticSummarySlide()}
-          {RoleSlide()}
-          {AriaSlide()}
+          { SemanticSummarySlide() }
+          { RoleSlide() }
+          { AriaSlide() }
           <AriaExampleSlide transition={["slide"]} />
           <DesignSlide transition={["slide"]} />
           <ReviewSlide transition={["slide"]} />
-          {ExampleSpecSlide()}
-          {SpecCommonSlide()}
-          {ModalCloseSlide()}
-          {ModalAriaSlide()}
-          {ModalTransitionSlide()}
-          {ModalFunctionalitySlide()}
+          { ExampleSpecSlide() }
+          { SpecCommonSlide() }
+          { ModalCloseSlide() }
+          { ModalAriaSlide() }
+          { ModalTransitionSlide() }
+          { ModalFunctionalitySlide() }
           <ReusableModalSlide transition={["slide"]} />
-          {UseResourcesSlide()}
+          { UseResourcesSlide() }
         </div>
       </Deck>
     );
