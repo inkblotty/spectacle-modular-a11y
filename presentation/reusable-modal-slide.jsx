@@ -8,7 +8,8 @@ import { Modal } from "bloom-layout";
 
 import Subheader from "./styled-wrappers/subheader";
 import LoginModal from "./example-modals/login-modal.jsx";
-
+import DownloadModal from "./example-modals/download-modal.jsx";
+import MeetupModal from "./example-modals/meetup-modal.jsx";
 
 // slide transition={["zoom"]}
 
@@ -24,6 +25,10 @@ const StyledSlide = styled(Slide)`
   }
 `;
 
+const StyledModalWrapper = styled("div")`
+  margin-top: 400px; // why? these slides do weird things to css
+`;
+
 class ReusableModalSlide extends React.Component {
   constructor(props) {
     super(props);
@@ -32,10 +37,10 @@ class ReusableModalSlide extends React.Component {
     this.state = {
       activeModal: "none",
       contents: {
-        "none": "none",
+        "none": ".",
         "login": <LoginModal />,
-        "download": "download",
-        "react-meetup": "meetup"
+        "download": <DownloadModal closeModal={this.toggleModal} />,
+        "react-meetup": <MeetupModal />
       },
       isOpen: false
     };
@@ -88,10 +93,12 @@ class ReusableModalSlide extends React.Component {
         <button onClick={this.toggleModal}>
           Open Selected Modal
         </button>
-        <Modal
-          closeModal={this.toggleModal}
-          modalContents={this.state.isOpen ? this.state.contents[this.state.activeModal] : null}
-        />
+        <StyledModalWrapper>
+          <Modal
+            closeModal={this.toggleModal}
+            modalContents={this.state.isOpen ? this.state.contents[this.state.activeModal] : null}
+          />
+        </StyledModalWrapper>
       </StyledSlide>
     );
   }
