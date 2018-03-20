@@ -5,6 +5,7 @@ import styled from "styled-components";
 const StyledDiv = styled("div")`
   color: #333;
   padding: 0 30px 30px;
+  text-align: center;
 
   h3 {
     margin-top: 0;
@@ -12,12 +13,17 @@ const StyledDiv = styled("div")`
     width: 100%;
   }
 
+  progress {
+    margin: 0 auto;
+    text-align: center;
+  }
+
   button {
     background-color: #438ABC;
     border: 4px;
     color: #eee;
     font-size: 1em;
-    margin-top: 15px;
+    margin: 15px auto 0;
   }
 `;
 
