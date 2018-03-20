@@ -6,6 +6,7 @@ import reactLogo from "../../assets/react_logo.svg";
 const StyledDiv = styled("div")`
   color: #333;
   padding: 0 30px 30px;
+  text-align: center;
 
   h3 {
     margin-top: 0;
