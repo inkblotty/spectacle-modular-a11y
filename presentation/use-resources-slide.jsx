@@ -19,6 +19,10 @@ const StyledSlide = styled(Slide)`
     &:nth-child(2n) {
       color: #c18e42;
     }
+
+    small {
+      color: #8abc43;
+    }
   }
 `;
 
