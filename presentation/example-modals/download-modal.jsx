@@ -29,6 +29,14 @@ class DownloadProgress extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.incrementProgress();
+  }
+
+  componentWillUnmount() {
+    clearTimeout(downloadTimeout)
+  }
+
   incrementProgress = () => {
     downloadTimeout = window.setTimeout(() => {
     if (this.state.currentProgress < 40) {
@@ -40,18 +48,10 @@ class DownloadProgress extends React.Component {
     }, 1000)
   }
 
-  componentWillUnmount() {
-    clearTimeout(downloadTimeout)
-  }
-
-  componentDidMount() {
-    this.incrementProgress();
-  }
-
   render() {
     return (
       <StyledDiv>
-        <h3>Download { this.state.currentProgress < 40 ? 'in Progress' : 'Complete!' }</h3>
+        <h3>Download { this.state.currentProgress < 40 ? "in Progress" : "Complete!" }</h3>
         <progress max="40" min="0" value={this.state.currentProgress} />
         <Button
           onClick={this.props.closeModal}
