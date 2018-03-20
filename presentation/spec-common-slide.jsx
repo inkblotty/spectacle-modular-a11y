@@ -29,33 +29,59 @@ const StyleWrapper = styled("div")`
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    li {
+      color: #8abc43;
+      font-size: .9em;
+      margin-left: 50px;
+
+      &:nth-of-type(2n) {
+        color: #c18e42;
+      }
+    }
   }
 `;
 
 // create an image of I <3 modals -- several modals hovering over a page
 
-class ExampleSpecSlide extends React.Component {
+class SpecCommonSlide extends React.Component {
   render() {
     return (
       <StyledSlide bgColor="secondary" textColor="primary">
-        <Subheader>Building an Example: The Spec</Subheader>
+        <Subheader>So what's common to all of these modals?</Subheader>
         <StyleWrapper>
           <List>
             <ListItem>
-              8 modals
+              close button
             </ListItem>
             <ListItem>
-              all different types of content (forms, wizards, messages)
+              appearing / disappearing from the top
             </ListItem>
             <ListItem>
-              <strong>They all have to be accessible.</strong>
+              Accessibility:
+              <List>
+                <ListItem>
+                  Role = "dialog" & ARIA attributes
+                </ListItem>
+                <ListItem>
+                  cover the page in a semi-opaque gray & prevent clicking behind the modal content
+                </ListItem>
+                <ListItem>
+                  trap tab focus so tabbing doesn't go below the modal
+                </ListItem>
+                <ListItem>
+                  ESC and click off close the modal
+                </ListItem>
+                <ListItem>
+                  focuses on close button when first opening
+                </ListItem>
+              </List>
             </ListItem>
           </List>
-          <Image src={modalImg} alt="Example Layout" height="500px" />
         </StyleWrapper>
       </StyledSlide>
     );
   }
 }
 
-export default ExampleSpecSlide;
+export default SpecCommonSlide;

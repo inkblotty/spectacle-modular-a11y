@@ -21,6 +21,14 @@ import AriaSlide from "./aria-slide.jsx";
 import AriaExampleSlide from "./aria-example-slide.jsx";
 import DesignSlide from "./design-slide.jsx";
 import ExampleSpecSlide from "./example-spec-slide.jsx";
+import ReviewSlide from "./review-slide.jsx";
+import SpecCommonSlide from "./spec-common-slide.jsx";
+import ModalCloseSlide from "./modal-close-slide.jsx";
+import ModalAriaSlide from "./modal-aria-slide.jsx";
+import ModalTransitionSlide from "./modal-transition-slide.jsx";
+import ModalFunctionalitySlide from "./modal-functionality-slide.jsx";
+import ReusableModalSlide from "./reusable-modal-slide.jsx";
+import UseResourcesSlide from "./use-resources-slide.jsx";
 
 // Require CSS
 require("normalize.css");
@@ -53,10 +61,15 @@ export default class Presentation extends React.Component {
         <AriaSlide />
         <AriaExampleSlide />
         <DesignSlide />
-        <div>
-          Quick review going back to avocado -- we start with the pit, then meat, then the skin
-        </div>
+        <ReviewSlide />
         <ExampleSpecSlide />
+        <SpecCommonSlide />
+        <ModalCloseSlide />
+        <ModalAriaSlide />
+        <ModalTransitionSlide />
+        <ModalFunctionalitySlide />
+        <ReusableModalSlide />
+        <UseResourcesSlide />
       </StyledDeck>
     );
   }
