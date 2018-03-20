@@ -8,6 +8,8 @@ const StyledDiv = styled("div")`
 
   h3 {
     margin-top: 0;
+    text-align: center;
+    width: 100%;
   }
 
   button {
