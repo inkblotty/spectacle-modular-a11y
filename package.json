@@ -16,7 +16,7 @@
   "dependencies": {
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "bloom-forms": "^1.3.3",
+    "bloom-forms": "^1.3.5",
     "bloom-layout": "^1.0.0",
     "normalize.css": "7.0.0",
     "react": "^16.0.0",

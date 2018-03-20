@@ -1,15 +1,14 @@
 import React from "react";
 import {
-  Image,
   Slide
 } from "spectacle";
 import styled from "styled-components";
 import { RadioGroup } from "bloom-forms";
 import { Modal } from "bloom-layout";
 
-import modalFunctionImg from "../assets/modal-functions.png";
-import modalEventsImg from "../assets/modal-events.png";
 import Subheader from "./styled-wrappers/subheader";
+import LoginModal from "./example-modals/login-modal.jsx";
+
 
 // slide transition={["zoom"]}
 
@@ -29,23 +28,23 @@ class ReusableModalSlide extends React.Component {
   constructor(props) {
     super(props);
     this.changeActiveModal = this.changeActiveModal.bind(this);
-    this.toggleModal = this.toggleModal.bind(this)
+    this.toggleModal = this.toggleModal.bind(this);
     this.state = {
-      activeModal: 'none',
+      activeModal: "none",
       contents: {
-        'none': 'none',
-        'login': 'login',
-        'download': 'download',
-        'react-meetup': 'meetup'
+        "none": "none",
+        "login": <LoginModal />,
+        "download": "download",
+        "react-meetup": "meetup"
       },
       isOpen: false
-    }
+    };
   }
 
   changeActiveModal(e) {
     this.setState({
       activeModal: e.target.id
-    })
+    });
   }
 
   toggleModal(e) {
@@ -54,26 +53,26 @@ class ReusableModalSlide extends React.Component {
     }
     this.setState({
       isOpen: !this.state.isOpen
-    })
+    });
   }
 
   render() {
     const radioOptions = [
       {
-        id: 'none',
-        label: 'No Modal Contents'
+        id: "none",
+        label: "No Modal Contents"
       },
       {
-        id: 'login',
-        label: 'Login Modal'
+        id: "login",
+        label: "Login Modal"
       },
       {
-        id: 'download',
-        label: 'Download Progress Modal'
+        id: "download",
+        label: "Download Progress Modal"
       },
       {
-        id: 'react-meetup',
-        label: 'React Denver Meetup Modal'
+        id: "react-meetup",
+        label: "React Denver Meetup Modal"
       }
     ]
 
@@ -81,7 +80,7 @@ class ReusableModalSlide extends React.Component {
       <StyledSlide bgColor="secondary" textColor="primary">
         <Subheader>The Final Result</Subheader>
         <RadioGroup
-          name='activeModal'
+          name="activeModal"
           onChange={this.changeActiveModal}
           options={radioOptions}
           value={this.state.activeModal}
