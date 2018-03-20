@@ -62,14 +62,14 @@ export default class Presentation extends React.Component {
         <AriaExampleSlide />
         <DesignSlide />
         <ReviewSlide />
-        <ExampleSpecSlide />
-        <SpecCommonSlide />
-        <ModalCloseSlide />
-        <ModalAriaSlide />
-        <ModalTransitionSlide />
-        <ModalFunctionalitySlide />
+        {ExampleSpecSlide()}
+        {SpecCommonSlide()}
+        {ModalCloseSlide()}
+        {ModalAriaSlide()}
+        {ModalTransitionSlide()}
+        {ModalFunctionalitySlide()}
         <ReusableModalSlide />
-        <UseResourcesSlide />
+        {UseResourcesSlide()}
       </StyledDeck>
     );
   }

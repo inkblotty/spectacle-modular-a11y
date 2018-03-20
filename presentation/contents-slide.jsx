@@ -46,6 +46,8 @@ const StyledLi = styled(ListItem)`
   }
 `;
 
+
+
 const ContentsSlide = () => {
     return (
       <Slide transition={['fade']} transitionDuration={500} bgColor="secondary">

@@ -15,7 +15,7 @@ import CodeWrapper from "./styled-wrappers/code-wrapper";
 
 // slide transition={["zoom"]}
 
-const StyledSlide = styled(Slide)`
+const StyledWrapper = styled.div`
   text-align: left;
 `;
 const StyleWrapper = styled("div")`
@@ -33,29 +33,28 @@ const StyleWrapper = styled("div")`
 `;
 
 // create an image of I <3 modals -- several modals hovering over a page
-
-class ExampleSpecSlide extends React.Component {
-  render() {
-    return (
-      <StyledSlide bgColor="secondary" textColor="primary">
-        <Subheader>Building an Example: The Spec</Subheader>
-        <StyleWrapper>
-          <List>
-            <ListItem>
-              8 modals
-            </ListItem>
-            <ListItem>
-              all different types of content (forms, wizards, messages)
-            </ListItem>
-            <ListItem>
-              <strong>They all have to be accessible.</strong>
-            </ListItem>
-          </List>
-          <Image src={modalImg} alt="Example Layout" height="500px" />
-        </StyleWrapper>
-      </StyledSlide>
-    );
-  }
+const ExampleSpecSlide = () => {
+  return (
+    <Slide transition={["zoom"]} transitionDuration={500} bgColor="secondary" textColor="primary">
+      <StyledWrapper>
+      <Subheader>Building an Example: The Spec</Subheader>
+      <StyleWrapper>
+        <List>
+          <ListItem>
+            8 modals
+          </ListItem>
+          <ListItem>
+            all different types of content (forms, wizards, messages)
+          </ListItem>
+          <ListItem>
+            <strong>They all have to be accessible.</strong>
+          </ListItem>
+        </List>
+        <Image src={modalImg} alt="Example Layout" height="500px" />
+      </StyleWrapper>
+      </StyledWrapper>
+    </Slide>
+  );
 }
 
 export default ExampleSpecSlide;

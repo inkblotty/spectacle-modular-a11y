@@ -15,7 +15,7 @@ import CodeWrapper from "./styled-wrappers/code-wrapper";
 
 // slide transition={["zoom"]}
 
-const StyledSlide = styled(Slide)`
+const StyledWrapper = styled.div`
   text-align: left;
 `;
 const StyleWrapper = styled("div")`
@@ -44,10 +44,10 @@ const StyleWrapper = styled("div")`
 
 // create an image of I <3 modals -- several modals hovering over a page
 
-class SpecCommonSlide extends React.Component {
-  render() {
-    return (
-      <StyledSlide bgColor="secondary" textColor="primary">
+const SpecCommonSlide = () => {
+  return (
+    <Slide transition={["zoom"]} transitionDuration={500}  bgColor="secondary" textColor="primary">
+      <StyledWrapper>
         <Subheader>So what's common to all of these modals?</Subheader>
         <StyleWrapper>
           <List>
@@ -79,9 +79,9 @@ class SpecCommonSlide extends React.Component {
             </ListItem>
           </List>
         </StyleWrapper>
-      </StyledSlide>
-    );
-  }
+      </StyledWrapper>
+    </Slide>
+  );
 }
 
 export default SpecCommonSlide;
